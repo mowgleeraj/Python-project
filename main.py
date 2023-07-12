@@ -1,16 +1,34 @@
-# This is a sample Python script.
+email= input("Enter your Email ----> ")
+k,j,d=0,0,0
+flag=False
+if len(email)>=6:
+    if email[0].isalpha():
+        if("@" in email) and (email.count("@")==1):
+            if (email[-4]==".") ^ (email[-3]=="."):
+                for i in email:
+                    if i==i.isspace():
+                        k=1
+                    elif i.isalpha():
+                        if i==i.upper():
+                            j=1
+                    elif i.isdigit():
+                        continue
+                    elif i =="_" or i =="." or i =="@":
+                        continue
+                    else:
+                        d=1
+                if k==1 or j==1 or d==1:
+                    print("wrong Emails -5")
+            else:
+                print("wrong Email -4")
+        else:
+            print("wrong Email -3")
+    else:
+        print("wrong Email -2")
+else:
+    print("wrong Email -1")
+flag= True
+if  flag:
+    print("email is good to go")
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
